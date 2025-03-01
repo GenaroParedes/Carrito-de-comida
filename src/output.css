@@ -182,9 +182,6 @@
   .\@container {
     container-type: inline-size;
   }
-  .\@container-\[inline-size\] {
-    container-type: inline-size;
-  }
   .pointer-events-auto {
     pointer-events: auto;
   }
@@ -335,24 +332,6 @@
       max-width: 96rem;
     }
   }
-  .container\! {
-    width: 100% !important;
-    @media (width >= 40rem) {
-      max-width: 40rem !important;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem !important;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem !important;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem !important;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem !important;
-    }
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -475,9 +454,6 @@
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -1091,35 +1067,14 @@
   .border-Rose-500 {
     border-color: var(--color-Rose-500);
   }
-  .bg-\(--my_variable\) {
-    background-color: var(--my_variable);
-  }
-  .bg-\(color\:--my-color\) {
-    background-color: var(--my-color);
-  }
   .bg-Red {
     background-color: var(--color-Red);
   }
   .bg-Rose-100 {
     background-color: var(--color-Rose-100);
   }
-  .bg-\[\#0088cc\] {
-    background-color: #0088cc;
-  }
-  .bg-\[color\:var\(--my-color\)\] {
-    background-color: var(--my-color);
-  }
-  .bg-\[var\(--my_variable\)\] {
-    background-color: var(--my_variable);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
-  }
-  .bg-red-500\/50 {
-    background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-red-500\/\[50\%\] {
-    background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1419,15 +1374,6 @@
   }
   .whitespace-pre-wrap {
     white-space: pre-wrap;
-  }
-  .\[color\:red\] {
-    color: red;
-  }
-  .\[color\:red\]\/50 {
-    color: color-mix(in oklab, red 50%, transparent);
-  }
-  .\[color\:red\]\/50\! {
-    color: color-mix(in oklab, red 50%, transparent) !important;
   }
   .text-Red {
     color: var(--color-Red);
@@ -1806,9 +1752,6 @@
   .outline-solid {
     --tw-outline-style: solid;
     outline-style: solid;
-  }
-  .\[keywords\:node-addon-api\] {
-    keywords: node-addon-api;
   }
   .backface-hidden {
     backface-visibility: hidden;

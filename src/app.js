@@ -5,13 +5,7 @@ let objPlato = {
 }
 
 let objCliente = {
-    pedido: [
-        objPlato = {
-            nombre: 'Genaro',
-            precio: '$7.00',
-            cantidad: '2'
-        }
-    ]
+    pedido: []
 }
 
 
@@ -21,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', cambiarBotones);
         button.addEventListener('mouseleave', resetearBotones);
     });
-})
+});
 
 function resetearBotones(e){
     const button = e.currentTarget;
@@ -69,28 +63,43 @@ function cambiarBotones(e){
 
 function sumarCantidad(e){
     const cantidad = e.currentTarget.previousElementSibling;
-    cantidad.textContent = parseInt(cantidad.textContent) + 1;
-
     const nombre = cantidad.parentElement.nextElementSibling.nextElementSibling.textContent;
     const precio = cantidad.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.textContent;
-
+    cantidad.textContent = parseInt(cantidad.textContent) + 1;
     actualizarObjetos(nombre, precio, cantidad.textContent);
 }
 
 function restarCantidad(e){
     const cantidad = e.currentTarget.nextElementSibling;
+    const nombre = cantidad.parentElement.nextElementSibling.nextElementSibling.textContent;
+    const precio = cantidad.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.textContent;
+
     if ( parseInt(cantidad.textContent) > 0 ){
         cantidad.textContent = parseInt(cantidad.textContent) - 1;
     }
+    actualizarObjetos(nombre, precio, cantidad.textContent);
 }
 
-function actualizarObjetos(nombre, precio, cantidad){
-    const {pedido} = objCliente;
-    console.log(pedido)
-    pedido.forEach(producto => {
-        console.log(producto)
-    })
-    objPlato.nombre = nombre;
-    objPlato.precio = precio;
-    objPlato.cantidad = cantidad;
+function actualizarObjetos(nombre, precio, cantidad) {
+    const { pedido } = objCliente;
+    const platoExistente = pedido.find(producto => producto.nombre === nombre);
+    
+    if (platoExistente) {
+        if (cantidad > 0) {
+            platoExistente.cantidad = cantidad;
+        } else {
+            objCliente.pedido = pedido.filter(producto => producto.nombre !== nombre);
+        }
+    } else {
+        if (cantidad > 0) {
+            const nuevoPlato = {
+                nombre: nombre,
+                precio: precio,
+                cantidad: cantidad
+            };
+            objCliente.pedido = [...pedido, nuevoPlato];
+        }
+    }
+
+    console.log(objCliente.pedido)
 }
