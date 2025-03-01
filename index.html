@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./src/output.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+</head>
+<body class="bg-Rose-100">
+  <div class="lg:grid lg:grid-cols-4 lg:gap-4">
+    <section class="p-4 lg:col-span-3">
+      <h1 class="text-3xl font-bold my-5">Desserts</h1>
+      <div class="cards sm:grid sm:grid-cols-2 gap-2 2xl:grid 2xl:grid-cols-3">
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-waffle-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-waffle-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-waffle-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-waffle-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="1" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer negativo" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <p class="hidden text-white font-bold" value="0">0</p>
+              <img class="hidden cursor-pointer positivo" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Waffle</p>
+            <p class="font-bold mb-1 name">Waffle with Berries</p>
+            <p class="text-Red mb-5 font-bold precio">$6.50</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-creme-brulee-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-creme-brulee-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-creme-brulee-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-waffle-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="2" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Crème Brûlée</p>
+            <p class="font-bold mb-1">Vanilla Bean Crème Brûlée</p>
+            <p class="text-Red mb-5 font-bold">$7.00</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-macaron-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-macaron-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-macaron-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-macaron-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="3" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Macaron</p>
+            <p class="font-bold mb-1">Macaron Mix of Five</p>
+            <p class="text-Red mb-5 font-bold">$8.00</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-tiramisu-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-tiramisu-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-tiramisu-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-tiramisu-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="4" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Tiramisu</p>
+            <p class="font-bold mb-1">Classic Tiramisu</p>
+            <p class="text-Red mb-5 font-bold">$5.50</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-baklava-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-baklava-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-baklava-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-baklava-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="5" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Baklava</p>
+            <p class="font-bold mb-1">Pistachio Baklava</p>
+            <p class="text-Red mb-5 font-bold">$4.00</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-meringue-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-meringue-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-meringue-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-meringue-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="6" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Pie</p>
+            <p class="font-bold mb-1">Lemon Meringue Pie</p>
+            <p class="text-Red mb-5 font-bold">$5.00</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-cake-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-cake-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-cake-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-cake-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="7" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Cake</p>
+            <p class="font-bold mb-1">Red Velvet Cake</p>
+            <p class="text-Red mb-5 font-bold">$4.50</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-brownie-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-brownie-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-brownie-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-brownie-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="8" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Brownie</p>
+            <p class="font-bold mb-1">Salted Caramel Brownie</p>
+            <p class="text-Red mb-5 font-bold">$4.50</p>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="./assets/images/image-panna-cotta-mobile.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/images/image-panna-cotta-tablet.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./assets/images/image-panna-cotta-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img class="hero-image rounded rounded-md w-full" src="./assets/images/image-panna-cotta-mobile.jpg" alt="hero-image" />
+          </picture>
+          <div >
+            <div id="9" class="w-40 buttonDiv bg-white rounded rounded-full flex justify-between mx-auto -mt-6 relative border border-Rose-500 py-3 px-5 cursor-pointer">
+              <img class="hidden cursor-pointer" src="./assets/images/icon-decrement-quantity.svg" alt="Logo negativo">
+              <span class="hidden text-white font-bold">0</span>
+              <img class="hidden cursor-pointer" src="./assets/images/icon-increment-quantity.svg" alt="Logo positivo">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="Logo carrito">
+              <p class="pl-2">Add to Cart</p>
+            </div>
+            <p class="text-Rose-400 my-1">Panna Cotta</p>
+            <p class="font-bold mb-1">Vanilla Panna Cotta</p>
+            <p class="text-Red mb-5 font-bold">$6.50</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="p-4 lg:mt-20 lg:col-span-1">
+      <div class="bg-white p-4  mb-5 rounded rounded-md">
+        <p class="font-bold text-3xl text-Red mb-4">Your Cart (<span class="valor-carta">0</span>)</p>
+        <img class="mx-auto mb-4" src="./assets/images/illustration-empty-cart.svg" alt="Logo torta">
+        <p class="text-center">Your added items will appear here</p>
+      </div>
+    </aside>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+</html>
